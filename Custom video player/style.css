@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width:80%;
+  height:80%;
+  border-radius: 10px;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: fill;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.controls {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+  transition: .5s;
+  user-select: none;
+  opacity: 0;
+}
+.progress-area {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  border-radius: 10px;
+  background-color: azure;
+  cursor: pointer;
+}
+.progress-bar::before{
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #2b90e2;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+}
+.progress-area .progress-bar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: #2b90e2;
+  border-radius: 10px;
+}
+
+.bottom-control {
+  height: 30px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 12.5px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 140px;
+}
+
+.left * {
+  cursor: pointer;
+}
+.middle * {
+  cursor: pointer;
+}
+.right * {
+  cursor: pointer;
+}
+
+.left input {
+  width: 90px;
+  height: 5px;
+}
+
+.speedOptions {
+  position: absolute;
+  background-color: white;
+  color: black;
+  bottom: calc(100% / 8);
+  right: 1%;
+  width: 100px;
+  display: none;
+  transition:.5s;
+}
+
+.speedOptions ul li {
+  list-style: none;
+ 
+}
+.speedOptions ul{
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  font-weight: 800;
+}
+.speedOptions ul.active {
+  background-color: #2b90e2;
+  padding: 8px;
+}
+
+.show{
+  display: block;
+}
+.controls.show-controls{
+  opacity: 1;
+}
+
+@media screen and (max-width:732px) {
+  .middle{
+    position: absolute;
+    top: 1%;
+  }
+  
+}
+
+@media screen and (max-width: 632px){
+  .container{
+    width: 95%;
+  }
+  .right{
+    position: absolute;
+    top: 1%;
+  }
+.left{
+  font-size: 15px;
+}.left input{
+  width: 70px;
+}
+}

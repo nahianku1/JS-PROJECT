@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+    
+      <video src="./Channel-Intro.mp4"></video>
+      <div class="controls show-controls">
+        
+        <div class="progress-area">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="bottom-control">
+          <div class="left">
+            <i class="fa-solid fa-volume-high"></i>
+            <input
+              type="range"
+              value="1"
+              min="0"
+              max="1"
+              step="any"
+              class="volumerange"
+            />
+            <span class="currentVidTime">00:00:00</span><span>/</span
+            ><span class="videoDuration">00:00:00</span>
+          </div>
+
+          <div class="middle">
+            <i class="fa-solid fa-backward"></i>
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-forward"></i>
+          </div>
+
+          <div class="right">
+            <span class="material-icons miniplayer"> featured_video </span>
+            <span class="material-icons speed"> speed </span>
+            <i class="fa-solid fa-expand fullscreen"></i>
+          </div>
+          <div class="speedOptions">
+            <ul data-speed="2">
+              <li>2x</li>
+            </ul>
+            <ul data-speed="1.5">
+              <li>1.5x</li>
+            </ul>
+            <ul data-speed="1" class="active">
+              <li>1x</li>
+            </ul>
+            <ul data-speed="0.5">
+              <li>0.75x</li>
+            </ul>
+            <ul data-speed="0.25">
+              <li>0.5x</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
